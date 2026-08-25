@@ -1,0 +1,6 @@
+{
+    "name": "phpenv",
+    "dockerComposeFile": "../docker-compose.yml",
+    "service": "phpenv",
+    "workspaceFolder": "/home/phpe"
+}

@@ -1,0 +1,19 @@
+services:
+  phpenv:
+    build:
+      context: .
+    container_name: phpenv
+    volumes:
+      - "./your_app:/home/phpe/your_app"
+    environment:
+      - HOST_IP=host.docker.internal
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+  phpenv-mysql:
+    image: mysql:9.7.2
+    container_name: phpenv_mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 'strongpassword'
+    volumes:
+      - "./my-datavolume:/var/lib/mysql"
+
