@@ -4,7 +4,7 @@ services:
       context: .
     container_name: phpenv
     volumes:
-      - "./your_app:/home/phpe/your_app"
+      - "./${APP_NAME}:/home/phpe/${APP_NAME}"
     environment:
       - HOST_IP=host.docker.internal
     extra_hosts:
