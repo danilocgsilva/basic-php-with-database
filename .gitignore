@@ -1,2 +1,4 @@
 my-datavolume/*
 .env
+output
+app/__pycache__/
